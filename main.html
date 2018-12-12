@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Employee Portal</title>
+        <style>
+                #mainDiv 
+                {
+                    width: 500px;
+                    height: 500px;
+                    position: relative;
+                    top:20;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+                .Table
+                {
+                    display: table;
+                    margin: auto;
+                    width: 70%;
+                }
+                .Heading
+                {
+                    display: table-row;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                .Row
+                {
+                    display: table-row;
+                }
+                .Cell
+                {
+                    display: table-cell;
+                    border: solid;
+                    border-width: thin;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+                label{
+                    color: red;
+                    display: none;
+                }
+    
+            </style>
+        <script src = "F:\ReactJS_Training\JavaScript\dataLayer.js"></script>
+        <script src = "F:\ReactJS_Training\JavaScript\uiLayer.js"></script>
+    </head>
+    <body>
+        <div id="mainDiv">
+            <fieldset>
+                <legend style="text-align: center"><h3>Employee Form:</h3></legend>
+                    Enter EmpId : <input type="text" id = "empId">
+                    <label id="err1"></label><br/><br/>
+                    Enter Name : <input type="text" id = "empName">
+                <label id="err2"></label><br/><br/>
+                    Enter Salary : <input type="text" id = "salary">
+                <label id="err3"></label><br/><br/>
+                <input type="submit" value="Submit" id="submitBtn" onclick="readData()"><br/>
+            </fieldset>
+            <div id="empDetails" style="display: none; text-align: center">
+                <fieldset>
+                    <legend><h3>Employee List:</h3></legend>
+
+                    <div class="Table" id="Table">
+                        <div class="Heading" id = "Heading">
+                            <div class="Cell">
+                                <p> Employee ID </p>
+                            </div>
+                            <div class="Cell">
+                                <p> Name </p>
+                            </div>
+                            <div class="Cell">
+                                <p> Salary </p>
+                            </div>
+                            <div class="Cell">
+                                <p> Action </p>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>             
+        </div>
+     </body>
+</html>
